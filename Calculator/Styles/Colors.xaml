@@ -1,0 +1,127 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Calculator.Styles">
+
+    <!--#region Window colors-->
+    <SolidColorBrush x:Key="Window.Static.Background" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="Window.Static.Border" Color="#FF5D6065"/>
+    <!--#endregion-->
+
+    <!--#region Display colors-->
+    <!--Current expression-->
+    <SolidColorBrush x:Key="CurrentExpression.Static.Foreground" Color="#FF4D4D4D"/>
+
+    <!--Current number-->
+    <SolidColorBrush x:Key="CurrentNumber.Static.Background" Color="Transparent"/>
+    <!--#endregion-->
+    
+    <!--#region Button colors-->
+    <!--#region Default button-->
+    <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+    <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+    <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFC3C3C3"/>
+    <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF8D8D8D"/>
+    <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFB8B8B8"/>
+    <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF808080"/>
+
+    <Color x:Key="Button.Disabled.Color">#FFF4F4F4</Color>
+    <SolidColorBrush x:Key="Button.Disabled.Background" Color="{StaticResource Button.Disabled.Color}"/>
+    <SolidColorBrush x:Key="Button.Disabled.Border" Color="{StaticResource Button.Disabled.Color}"/>
+    <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FFC8C8C8"/>
+    <!--#endregion-->
+    
+    <!--#region Window control button-->
+    <!--Base window control button-->
+    <Color x:Key="WindowControlButton.Static.Color">Transparent</Color>
+    <SolidColorBrush x:Key="WindowControlButton.Static.Background" Color="{StaticResource WindowControlButton.Static.Color}"/>
+    <SolidColorBrush x:Key="WindowControlButton.Static.Border" Color="{StaticResource WindowControlButton.Static.Color}"/>
+    
+    <Color x:Key="WindowControlButton.MouseOver.Color">#FFCFCFCF</Color>
+    <SolidColorBrush x:Key="WindowControlButton.MouseOver.Background" Color="{StaticResource WindowControlButton.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="WindowControlButton.MouseOver.Border" Color="{StaticResource WindowControlButton.MouseOver.Color}"/>
+
+    <Color x:Key="WindowControlButton.Pressed.Color">#FFC3C3C3</Color>
+    <SolidColorBrush x:Key="WindowControlButton.Pressed.Background" Color="{StaticResource WindowControlButton.Pressed.Color}"/>
+    <SolidColorBrush x:Key="WindowControlButton.Pressed.Border" Color="{StaticResource WindowControlButton.Pressed.Color}"/>
+
+    <!--Window close control button-->
+    <Color x:Key="WindowCloseControlButton.MouseOver.Color">#FFE81123</Color>
+    <SolidColorBrush x:Key="WindowCloseControlButton.MouseOver.Background" Color="{StaticResource WindowCloseControlButton.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="WindowCloseControlButton.MouseOver.Border" Color="{StaticResource WindowCloseControlButton.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="WindowCloseControlButton.MouseOver.Foreground" Color="#FFFFFFFF"/>
+
+    <Color x:Key="WindowCloseControlButton.Pressed.Color">#FFF1707A</Color>
+    <SolidColorBrush x:Key="WindowCloseControlButton.Pressed.Background" Color="{StaticResource WindowCloseControlButton.Pressed.Color}"/>
+    <SolidColorBrush x:Key="WindowCloseControlButton.Pressed.Border" Color="{StaticResource WindowCloseControlButton.Pressed.Color}"/>
+    <SolidColorBrush x:Key="WindowCloseControlButton.Pressed.Foreground" Color="#000000"/>
+    <!--#endregion-->
+
+    <!--#region Top panel (menu) button-->
+    <!--Base top panel (menu) button-->
+    <Color x:Key="TopPanelButton.Static.Color">Transparent</Color>
+    <SolidColorBrush x:Key="TopPanelButton.Static.Background" Color="{StaticResource TopPanelButton.Static.Color}" />
+    <SolidColorBrush x:Key="TopPanelButton.Static.Border" Color="{StaticResource TopPanelButton.Static.Color}"/>
+
+    <Color x:Key="TopPanelButton.Disabled.Color">Transparent</Color>
+    <SolidColorBrush x:Key="TopPanelButton.Disabled.Background" Color="{StaticResource TopPanelButton.Static.Color}" />
+    <SolidColorBrush x:Key="TopPanelButton.Disabled.Border" Color="{StaticResource TopPanelButton.Static.Color}"/>
+    <SolidColorBrush x:Key="TopPanelButton.Disabled.Foreground" Color="#FFB8B8B8"/>
+    
+    <!--Navigation button-->
+    <Color x:Key="NavigationButton.MouseOver.Color">#FFCFCFCF</Color>
+    <SolidColorBrush x:Key="NavigationButton.MouseOver.Background" Color="{StaticResource NavigationButton.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="NavigationButton.MouseOver.Border" Color="{StaticResource NavigationButton.MouseOver.Color}"/>
+
+    <Color x:Key="NavigationButton.Pressed.Color">#FFC3C3C3</Color>
+    <SolidColorBrush x:Key="NavigationButton.Pressed.Background" Color="{StaticResource NavigationButton.Pressed.Color}"/>
+    <SolidColorBrush x:Key="NavigationButton.Pressed.Border" Color="{StaticResource NavigationButton.Pressed.Color}"/>
+    <!--#endregion-->
+
+    <!--#region Memory button-->
+    <Color x:Key="MemoryButton.Static.Color">Transparent</Color>
+    <SolidColorBrush x:Key="MemoryButton.Static.Background" Color="{StaticResource MemoryButton.Static.Color}" />
+    <SolidColorBrush x:Key="MemoryButton.Static.Border" Color="{StaticResource MemoryButton.Static.Color}"/>
+
+    <Color x:Key="MemoryButton.Disabled.Color">Transparent</Color>
+    <SolidColorBrush x:Key="MemoryButton.Disabled.Background" Color="{StaticResource MemoryButton.Static.Color}" />
+    <SolidColorBrush x:Key="MemoryButton.Disabled.Border" Color="{StaticResource MemoryButton.Static.Color}"/>
+    <SolidColorBrush x:Key="MemoryButton.Disabled.Foreground" Color="#FFB8B8B8"/>
+    <!--#endregion-->
+
+    <!--#region Number button-->
+    <Color x:Key="NumberButton.Static.Color">#FFFAFAFA</Color>
+    <SolidColorBrush x:Key="NumberButton.Static.Background" Color="{StaticResource NumberButton.Static.Color}"/>
+    <SolidColorBrush x:Key="NumberButton.Static.Border" Color="{StaticResource NumberButton.Static.Color}"/>
+
+    <Color x:Key="NumberButton.Disabled.Color">#FFFAFAFA</Color>
+    <SolidColorBrush x:Key="NumberButton.Disabled.Background" Color="{StaticResource NumberButton.Static.Color}" />
+    <SolidColorBrush x:Key="NumberButton.Disabled.Border" Color="{StaticResource NumberButton.Static.Color}"/>
+    <SolidColorBrush x:Key="NumberButton.Disabled.Foreground" Color="#FFC8C8C8"/>
+    <!--#endregion-->
+    
+    <!--#region Operation button-->
+    <Color x:Key="OperationButton.Static.Color">#FFDADADA</Color>
+    <SolidColorBrush x:Key="OperationButton.Static.Background" Color="{StaticResource OperationButton.Static.Color}"/>
+    <SolidColorBrush x:Key="OperationButton.Static.Border" Color="{StaticResource OperationButton.Static.Color}"/>
+    <!--#endregion-->
+
+    <!--#region Result button-->
+    <Color x:Key="ResultButton.Static.Color">#FF8ABAE0</Color>
+    <SolidColorBrush x:Key="ResultButton.Static.Background" Color="{StaticResource ResultButton.Static.Color}"/>
+    <SolidColorBrush x:Key="ResultButton.Static.Border" Color="{StaticResource ResultButton.Static.Color}"/>
+    
+    <SolidColorBrush x:Key="ResultButton.MouseOver.Background" Color="#FF3A8ED0"/>
+    <SolidColorBrush x:Key="ResultButton.MouseOver.Border" Color="#FF3178B1"/>
+    <SolidColorBrush x:Key="ResultButton.Pressed.Background" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="ResultButton.Pressed.Border" Color="#FF0068B9"/>
+    <!--#endregion-->
+    <!--#endregion-->
+
+    <!--#region ToopTip colors-->
+    <SolidColorBrush x:Key="ToopTip.Static.Background" Color="#FFE0E0E0"/>
+    <SolidColorBrush x:Key="ToopTip.Static.Border" Color="#FFC1C1C1"/>
+    <SolidColorBrush x:Key="ToopTip.Static.Foreground" Color="#FF1F1F1F"/>
+    <Color x:Key="ToopTip.Static.Shadow">#FF000000</Color>
+    <!--#endregion-->
+
+</ResourceDictionary>

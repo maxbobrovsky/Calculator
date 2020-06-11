@@ -11,7 +11,7 @@ namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
 
         public override double Operation()
         {
-            return leftArg.Operation() / rightArg.Operation();
+            return System.Math.Truncate(leftArg.Operation() / rightArg.Operation());
         }
     }
 }

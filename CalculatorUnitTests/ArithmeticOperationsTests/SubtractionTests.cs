@@ -136,5 +136,27 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void SubtractionOverflowTestWithPositiveNumber()
+        {
+            Number leftArg = new Number(79228162514264337593543950318m);
+            Number rightArg = new Number(-876);
+
+            Subtraction subtraction = new Subtraction(leftArg, rightArg);
+
+            Assert.ThrowsException<System.OverflowException>(() => subtraction.Operation());
+        }
+
+        [TestMethod]
+        public void SubtractionOverflowTestWithNegativeNumber()
+        {
+            Number leftArg = new Number(-79228162514264337593543950309m);
+            Number rightArg = new Number(965);
+
+            Subtraction subtraction = new Subtraction(leftArg, rightArg);
+
+            Assert.ThrowsException<System.OverflowException>(() => subtraction.Operation());
+        }
     }
 }

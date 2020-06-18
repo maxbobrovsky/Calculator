@@ -123,5 +123,27 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void AdditionOverflowTestWithPositiveNumber()
+        {
+            Number leftArg = new Number(79228162514264337593543950310m);
+            Number rightArg = new Number(62531);
+
+            Addition addition = new Addition(leftArg, rightArg);
+
+            Assert.ThrowsException<System.OverflowException>(() => addition.Operation());
+        }
+
+        [TestMethod]
+        public void AdditionOverflowTestWithNegativeNumber()
+        {
+            Number leftArg = new Number(-79228162514264337593543950319m);
+            Number rightArg = new Number(-7211);
+
+            Addition addition = new Addition(leftArg, rightArg);
+
+            Assert.ThrowsException<System.OverflowException>(() => addition.Operation());
+        }
     }
 }

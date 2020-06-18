@@ -98,5 +98,29 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void MultiplicationOverflowTestWithPositiveNumber()
+        {
+            Number leftArg = new Number(79228162514264337593543950329m);
+            Number rightArg = new Number(2);
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+           
+            Assert.ThrowsException<OverflowException>(() => mul.Operation());
+        }
+
+        [TestMethod]
+        public void MultiplicationOverflowTestWithNegativeNumber()
+        {
+            Number leftArg = new Number(-79228162514264337593543950311m);
+            Number rightArg = new Number(2);
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+
+            Assert.ThrowsException<OverflowException>(() => mul.Operation());
+        }
+
+
     }
 }

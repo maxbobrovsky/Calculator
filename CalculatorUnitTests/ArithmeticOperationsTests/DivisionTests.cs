@@ -125,5 +125,27 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void DivisionOverflowTestWithPositiveNumber()
+        {
+            Number leftArg = new Number(79228162514264337593543950311m);
+            Number rightArg = new Number(0.3m);
+
+            Division div = new Division(leftArg, rightArg);
+
+            Assert.ThrowsException<OverflowException>(() => div.Operation());
+        }
+
+        [TestMethod]
+        public void DivisionOverflowTestWithNegativeNumber()
+        {
+            Number leftArg = new Number(79228162514264337593543950317m);
+            Number rightArg = new Number(-0.15m);
+
+            Division div = new Division(leftArg, rightArg);
+
+            Assert.ThrowsException<OverflowException>(() => div.Operation());
+        }
     }
 }

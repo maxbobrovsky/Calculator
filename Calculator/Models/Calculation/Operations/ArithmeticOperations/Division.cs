@@ -13,8 +13,12 @@ namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
 
         public override decimal Operation()
         {
+<<<<<<< HEAD
              return System.Math.Truncate(leftArg.Operation() / rightArg.Operation()); 
            
+=======
+            return System.Math.Truncate(leftArg.Operation() / rightArg.Operation());
+>>>>>>> b67fc9f11778ad7a9f07e9d79452c2487dd1abc5
         }
 
        

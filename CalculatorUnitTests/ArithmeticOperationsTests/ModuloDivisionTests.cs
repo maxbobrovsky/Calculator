@@ -11,7 +11,7 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void ModuloDivisionPositiveIntegerNumberOnPositiveIntegerOne()
         {
-            Number leftArg = new Number(17m);
+            Number leftArg = new Number(13m);
             Number rightArg = new Number(4m);
             int expected = 1;
 

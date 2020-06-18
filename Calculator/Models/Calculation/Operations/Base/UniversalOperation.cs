@@ -5,6 +5,6 @@
     /// </summary>
     public abstract class UniversalOperation
     {
-        public abstract double Operation();
+        public abstract decimal Operation();
     }
 }

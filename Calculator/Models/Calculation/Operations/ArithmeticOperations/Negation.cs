@@ -9,7 +9,7 @@ namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
     {
         public Negation(UniversalOperation negate) : base(negate) { }
 
-        public override double Operation() 
+        public override decimal Operation() 
         { 
             return -arg.Operation();
         }

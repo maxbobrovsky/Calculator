@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using Calculator.Common;
 using Calculator.Models.Calculation;
 
@@ -35,13 +36,15 @@ namespace Calculator.Models.MakeAnExpression
             }
 
             currentData.CurrentExpression = NewCurrentExpression(pressedOperation);
-            currentData.CurrentNumber = pressedOperation == BasicMathOperations.Equal ? calculate.Calc(currentData.CurrentExpression).ToString() : clearData.ClearNumber(currentData.CurrentNumber);
-
-            if (double.IsNaN(double.Parse(currentData.CurrentNumber)) || double.IsPositiveInfinity(double.Parse(currentData.CurrentNumber)) || 
-                double.IsNegativeInfinity(double.Parse(currentData.CurrentNumber)))
+            try
             {
-                currentData.CurrentNumber = "Calculation error";
+                currentData.CurrentNumber = pressedOperation == BasicMathOperations.Equal
+                ? calculate.Calc(currentData.CurrentExpression).ToString()
+                : clearData.ClearNumber(currentData.CurrentNumber);
             }
+            catch (DivideByZeroException) { currentData.CurrentNumber = "Division by zero"; }
+            catch (OverflowException) { currentData.CurrentNumber = "NaN"; }
+
 
             if (pressedOperation == BasicMathOperations.Equal)
             {

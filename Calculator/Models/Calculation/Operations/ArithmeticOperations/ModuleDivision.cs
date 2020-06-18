@@ -9,7 +9,7 @@ namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
     {
         public ModuleDivision(UniversalOperation leftArg, UniversalOperation rightArg) : base(leftArg, rightArg) { }
 
-        public override double Operation()
+        public override decimal Operation()
         {
             return leftArg.Operation() % rightArg.Operation();
         }

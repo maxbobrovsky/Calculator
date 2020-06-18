@@ -30,7 +30,7 @@ namespace Calculator.Models.Calculation
         /// <returns>
         /// Expression calculation result
         /// </returns>
-        public double Calc(string currentExpression)
+        public decimal Calc(string currentExpression)
         {
             UniversalOperation result;
             this.currentExpression = currentExpression;
@@ -143,7 +143,7 @@ namespace Calculator.Models.Calculation
             else
             {
                 //Parsing numbers
-                double val = 0.0;
+                decimal val = 0.0m;
                 int startPosition = pos;
 
                 //Find out the size of the number to parse
@@ -155,7 +155,7 @@ namespace Calculator.Models.Calculation
                 //Attempt to parse a number
                 try
                 {
-                    val = double.Parse(currentExpression.Substring(startPosition, pos - startPosition));
+                    val = decimal.Parse(currentExpression.Substring(startPosition, pos - startPosition));
                 }
                 catch (System.Exception e)
                 {

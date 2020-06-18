@@ -2,6 +2,8 @@
 
 namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
 {
+    
+
     /// <summary>
     /// For dividing numbers
     /// </summary>
@@ -9,9 +11,12 @@ namespace Calculator.Models.Calculation.Operations.ArithmeticOperations
     {
         public Division(UniversalOperation leftArg, UniversalOperation rightArg) : base(leftArg, rightArg) { }
 
-        public override double Operation()
+        public override decimal Operation()
         {
-            return leftArg.Operation() / rightArg.Operation();
+             return System.Math.Truncate(leftArg.Operation() / rightArg.Operation()); 
+           
         }
+
+       
     }
 }

@@ -9,10 +9,94 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
     public class MultiplicationTests
     {
         [TestMethod]
-        public void MultiplicationTest()
+        public void MultiplicationOfTwoPositiveIntegerNumbers()
         {
-            throw new NotImplementedException();
+            Number leftArg = new Number(15m);
+            Number rightArg = new Number(20m);
+            int expected = 300;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
         }
-     
+
+        [TestMethod]
+        public void MultiplicationOfTwoNegativeIntegerNumbers()
+        {
+            Number leftArg = new Number(-2m);
+            Number rightArg = new Number(-105m);
+            int expected = 210;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MultiplicationOfANegativeIntegerNumberByAPositiveOne()
+        {
+            Number leftArg = new Number(-4m);
+            Number rightArg = new Number(12m);
+            int expected = -48;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MultiplicationOfAZeroByARealNumber()
+        {
+            Number leftArg = new Number(0);
+            Number rightArg = new Number(1.5m);
+            int expected = 0;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MultiplicationOfTwoPositiveRealNumbers()
+        {
+            Number leftArg = new Number(2.1m);
+            Number rightArg = new Number(2.2m);
+            decimal expected = 4.62m;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MultiplicationOfTwoNegativeRealNumbers()
+        {
+            Number leftArg = new Number(-1.5m);
+            Number rightArg = new Number(-2.4m);
+            decimal expected = 3.6m;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, Math.Round(actual, 2));
+        }
+
+        [TestMethod]
+        public void MultiplicationOfANegativeRealNumberByAPositiveOne()
+        {
+            Number leftArg = new Number(-4.1m);
+            Number rightArg = new Number(12.1m);
+            decimal expected = -49.61m;
+
+            Multiplication mul = new Multiplication(leftArg, rightArg);
+            decimal actual = mul.Operation();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

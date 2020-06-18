@@ -10,12 +10,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfTwoPositiveIntegers()
         {
-            Number leftArg = new Number(10);
-            Number rightArg = new Number(20);
+            Number leftArg = new Number(10m);
+            Number rightArg = new Number(20m);
             int expected = 30;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -23,12 +23,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfTwoNegativeIntegers()
         {
-            Number leftArg = new Number(-10);
-            Number rightArg = new Number(-20);
+            Number leftArg = new Number(-10m);
+            Number rightArg = new Number(-20m);
             int expected = -30;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -36,12 +36,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfPositiveAndNegativeIntegers()
         {
-            Number leftArg = new Number(10);
-            Number rightArg = new Number(-20);
+            Number leftArg = new Number(10m);
+            Number rightArg = new Number(-20m);
             int expected = -10;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -49,12 +49,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfNegativeAndPositiveIntegers()
         {
-            Number leftArg = new Number(-10);
-            Number rightArg = new Number(20);
+            Number leftArg = new Number(-10m);
+            Number rightArg = new Number(20m);
             int expected = 10;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -62,8 +62,8 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfTwoPositiveRealNumbers()
         {
-            Number leftArg = new Number(10.2);
-            Number rightArg = new Number(20.4);
+            Number leftArg = new Number(10.2m);
+            Number rightArg = new Number(20.4m);
             decimal expected = 30.6m;
 
             Addition addition = new Addition(leftArg, rightArg);
@@ -75,8 +75,8 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfTwoNegativeRealNumbers()
         {
-            Number leftArg = new Number(-10.2);
-            Number rightArg = new Number(-20.4);
+            Number leftArg = new Number(-10.2m);
+            Number rightArg = new Number(-20.4m);
             decimal expected = -30.6m;
 
             Addition addition = new Addition(leftArg, rightArg);
@@ -88,12 +88,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfPositiveAndNegativeRealNumbers()
         {
-            Number leftArg = new Number(10.2);
-            Number rightArg = new Number(-20.4);
-            double expected = -10.2;
+            Number leftArg = new Number(10.2m);
+            Number rightArg = new Number(-20.4m);
+            decimal expected = -10.2m;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -101,12 +101,12 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         [TestMethod]
         public void AdditionOfNegativeAndPositiveRealNumbers()
         {
-            Number leftArg = new Number(-10.5);
-            Number rightArg = new Number(20.5);
+            Number leftArg = new Number(-10.5m);
+            Number rightArg = new Number(20.5m);
             int expected = 10;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }
@@ -115,11 +115,11 @@ namespace CalculatorUnitTests.ArithmeticOperationsTests
         public void AdditionOfAnIntegerAndARealNumber()
         {
             Number leftArg = new Number(10);
-            Number rightArg = new Number(20.4);
-            double expected = 30.4;
+            Number rightArg = new Number(20.4m);
+            decimal expected = 30.4m;
 
             Addition addition = new Addition(leftArg, rightArg);
-            double actual = addition.Operation();
+            decimal actual = addition.Operation();
 
             Assert.AreEqual(expected, actual);
         }

@@ -5,14 +5,14 @@
     /// </summary>
     public class Number : UniversalOperation
     {
-        private double value;
+        private decimal value;
 
-        public Number(double value)
+        public Number(decimal value)
         {
             this.value = value;
         }
 
-        public override double Operation()
+        public override decimal Operation()
         {
             return value;
         }
